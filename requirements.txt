@@ -2,3 +2,4 @@ whispercpp @ git+https://github.com/aarnphm/whispercpp.git@9bf9a28
 llama-cpp-python==0.1.74
 pyinstaller==5.13.0
 PyQt5==5.15.9
+PyAudio==0.2.13
