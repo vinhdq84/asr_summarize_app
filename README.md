@@ -9,7 +9,7 @@ This works as follows:
 
 Demo video:
 
-demos/usage.mp4
+https://github.com/vinhdq84/asr_summarize_app/assets/133619903/d18e4caf-07de-4e14-9d8a-20a0db079ef7
 
 ### Installation using Conda
 
