@@ -28,6 +28,9 @@ class OpsWorker(QObject):
     def __init__(self):
         super().__init__()
         self._stop_requested = False
+        self.text = "He was far from being her friends let alone her lover.\
+            She told him to focus on his career, love would chase him.\
+                Then the day he succeeded came, but she had already been with another man."
 
     def run_loading(self):
         self.llama = Llama(
@@ -38,7 +41,6 @@ class OpsWorker(QObject):
         self.whisper = Whisper.from_pretrained(
             os.path.join(basedir, "models/whisper/ggml-tiny.en.bin")
         )
-        self.text = "He was far from being her friends let alone her lover. She told him to focus on his career, love would chase him. Then the day he succeeded came, but she had already been with another man."
         self.finished.emit()
 
     def run_recognizing(self):
@@ -81,7 +83,7 @@ class OpsWorker(QObject):
     def run_summarizing(self):
         titled = False
         for i in self.llama(
-            prompt=f"### Instruction: Summarize the following, no longer than the original, return the result only: {self.text}\n### Response:",
+            prompt=f'### Instruction: Summarize the following, return the result only, do not hallucinate: "{self.text}"\n### Response:',
             stream=True,
         ):
             if not titled:
@@ -117,7 +119,7 @@ class MainWindow(QMainWindow):
         self.sum_content.setMargin(5)
 
         self.spinner = QMovie(os.path.join(basedir, "icons/spinner2.gif"))
-        
+
         global_layout.addWidget(self.asr_content)
         global_layout.addWidget(self.sum_content)
 
@@ -197,7 +199,7 @@ class MainWindow(QMainWindow):
             self.sum_content.setMovie(self.spinner)
             self.spinner.start()
             self.ops_worker.stop_recognizing()
-  
+
     def summarize(self):
         self.disconnect()
         self.summarize_button.setEnabled(False)
