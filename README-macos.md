@@ -6,17 +6,18 @@
 
 Conda is some kind of python package manager. It helps you set up an isolated python environment (so that you don't mess other apps' environment up). You may want to use Miniconda for simpler installation.
 
-Download the Minconda installer from [this link](https://repo.anaconda.com/miniconda/Miniconda3-py38_23.5.2-0-MacOSX-arm64.sh). In terminal, change directory to where the installer located, run the command below:
+Download the Miniconda installer from [this link](https://repo.anaconda.com/miniconda/Miniconda3-py38_23.5.2-0-MacOSX-arm64.sh). In terminal, change directory to where the installer is located, run the command below:
 
 ```console
 bash Miniconda3-py38_23.5.2-0-MacOSX-arm64.sh
 ```
 
-Follow the instructions to finish installation. Then close and re-open the terminal, type `conda --version`, the result should be `conda 23.5.2`.
+Follow the instructions to finish installation. Then close and re-open the terminal, run `conda --version`, the result should be `conda 23.5.2`.
 
-#### Environment setup
+#### Environment setup & run
+_Follow the below process in your terminal_
 
-Create new conda environment with Python version `3.8.10`
+Create a new conda environment with Python version `3.8.10`
 
 ```console
 conda create -n asr_summarize_app python=3.8.10
@@ -34,7 +35,7 @@ Clone this repository using
 git clone https://github.com/vinhdq84/asr_summarize_app.git
 ```
 
-In your terminal, type
+Change directory to the cloned project `asr_summarize_app`
 
 ```console
 cd asr_summarize_app/
@@ -46,13 +47,13 @@ Install `portaudio` through `brew`
 brew install portaudio
 ```
 
-Install the python dependencies
+Install the required python dependencies
 
 ```console
 pip install -r requirements.txt
 ```
 
-Download the `.ggml` models from [here](https://drive.google.com/drive/folders/1K8aeax8GKqfXGQAwJZscDRzUszK0CS15?usp=drive_link) and extract them to the project directory. Make sure your project directory structure looks like this (use `tree` command):
+Download the `.ggml` models from [here](https://drive.google.com/drive/folders/1K8aeax8GKqfXGQAwJZscDRzUszK0CS15?usp=drive_link) and extract them to the project directory. Make sure your directory structure looks like this (use `tree` command):
 
 ```console
 .

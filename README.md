@@ -2,7 +2,7 @@
 
 ### Installation using Conda
 
-Create new conda environment with python version 3.8.10
+Create a new conda environment with python version 3.8.10
 
 ```console
 conda create -n asr_summarize_app python=3.8.10
@@ -26,7 +26,7 @@ Install the python dependencies
 pip install -r requirements.txt
 ```
 
-Download the `.ggml` models from [here](https://drive.google.com/drive/folders/1K8aeax8GKqfXGQAwJZscDRzUszK0CS15?usp=drive_link) and make sure your project directory looks like this (use `tree` command):
+Download the `.ggml` models from [here](https://drive.google.com/drive/folders/1K8aeax8GKqfXGQAwJZscDRzUszK0CS15?usp=drive_link) and make sure your directory structure looks like this (use `tree` command):
 
 ```console
 .
