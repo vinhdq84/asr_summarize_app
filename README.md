@@ -1,16 +1,5 @@
 ## This app is for testing the abilities of LLama 2 and Whisper
 
-### How to use
-
-This works as follows:
-
-- Click `Listen` to start real-time speech recognizing. The results will be printed out one after another.
-- Afterward, click `Summarize` to stop recogizing and start summarizing the listened content, this may take a while.
-
-Demo video:
-
-https://github.com/vinhdq84/asr_summarize_app/assets/133619903/d18e4caf-07de-4e14-9d8a-20a0db079ef7
-
 ### Installation using Conda
 
 Create new conda environment with python version 3.8.10
@@ -37,7 +26,7 @@ Install the python dependencies
 pip install -r requirements.txt
 ```
 
-Download the `.ggml` models from [here](https://drive.google.com/drive/folders/1K8aeax8GKqfXGQAwJZscDRzUszK0CS15?usp=drive_link) and make sure your project directory looks like this (use `tree -la`):
+Download the `.ggml` models from [here](https://drive.google.com/drive/folders/1K8aeax8GKqfXGQAwJZscDRzUszK0CS15?usp=drive_link) and make sure your project directory looks like this (use `tree` command):
 
 ```console
 .
@@ -66,3 +55,14 @@ Run the app
 ```console
 python app.py
 ```
+
+### How to use
+
+This app works as follows:
+
+- Click `Listen` to start real-time speech recognizing. The results will be printed out one after another.
+- Afterward, click `Summarize` to stop recogizing and start summarizing the listened content, this may take a while.
+
+Demo video:
+
+https://github.com/vinhdq84/asr_summarize_app/assets/133619903/d18e4caf-07de-4e14-9d8a-20a0db079ef7

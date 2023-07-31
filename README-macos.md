@@ -52,28 +52,29 @@ Install the python dependencies
 pip install -r requirements.txt
 ```
 
-Download the `.ggml` models from [here](https://drive.google.com/drive/folders/1K8aeax8GKqfXGQAwJZscDRzUszK0CS15?usp=drive_link) and extract them to the project directory. Make sure your project directory looks like this (use `tree -la`):
+Download the `.ggml` models from [here](https://drive.google.com/drive/folders/1K8aeax8GKqfXGQAwJZscDRzUszK0CS15?usp=drive_link) and extract them to the project directory. Make sure your project directory structure looks like this (use `tree` command):
 
 ```console
 .
+├── Listen and Summarize.spec
+├── README-macos.md
+├── README.md
 ├── app.py
 ├── draft.ipynb
-├── .gitignore
 ├── icons
 │   ├── complete.png
 │   ├── icon.png
-│   ├── spinner2.gif
 │   ├── spinner.gif
+│   ├── spinner2.gif
 │   └── start.png
-├── Listen and Summarize.spec
 ├── models
 │   ├── llama2
 │   │   └── llama-2-13b-chat.ggmlv3.q4_K_M.bin
 │   └── whisper
 │       └── ggml-tiny.en.bin
-├── README-macos.md
-├── README.md
 └── requirements.txt
+
+5 directories, 13 files
 ```
 
 Run the app
@@ -84,7 +85,7 @@ python app.py
 
 ### How to use
 
-This works as follows:
+This app works as follows:
 
 - Click `Listen` to start real-time speech recognizing. The results will be printed out one after another.
 - Afterward, click `Summarize` to stop recogizing and start summarizing the listened content, this may take a while.
